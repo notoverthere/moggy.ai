@@ -1,8 +1,13 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');*/
 :root {
-  --col-background: #880000;
-  --col-text: #ffffff;
-  --col-link: #ffff00;
+  --col-background: #F9F5FF;
+  --col-main1: #3E92CC;
+  --col-main2: #0A2463;
+  --col-accent1: #DF2935; 
+  --col-accent2: #FDCA40;
+
+  --col-text: var(--col-main1);
+  --col-link: var(--col-main2);
   --font-main: 'Fira Sans', sans-serif;
 }
 a {
@@ -11,14 +16,42 @@ a {
 body {
   margin: 0;
   font-family: var(--font-main);
+  font-weight: bold;
   color: var(--col-text);
   background-color: var(--col-background);
 }
-.test {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 32pt;
+.site-title {
+  padding-left: 1%;
+  padding-top: 1%;
+  font-size: 40pt;
+}
+.site-title-hr {
+  width: 11.4%;
+  margin-bottom: 0;
+  margin-top: 0.8%;
+  margin-left: 0;
+  z-index: 101;
+  align: left;
+  color: var(--col-text);
+}
+.flex-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5%;
+  padding: 1%;
+  column-gap: 5%;
+}
+.cell {
+  padding: 5%; 
+  border-style: solid;
+  border-color: var(--col-accent1);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+}
+.cell-text{
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20pt;
 }
